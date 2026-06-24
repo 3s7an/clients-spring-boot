@@ -17,7 +17,6 @@ import java.util.List;
 @AllArgsConstructor
 public class ClientController {
     private final ClientService clientService;
-    private final Client testClient = new Client("Jan", "Mažgut", "jm@gmail.com", "112233");
     private final UserMapper userMapper;
 
 
