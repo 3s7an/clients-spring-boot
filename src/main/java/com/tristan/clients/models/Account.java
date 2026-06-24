@@ -10,8 +10,11 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    // client relationship
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clientId", nullable = false)
+
     private Client client;
     private String iban;
     private String accountNumber;
