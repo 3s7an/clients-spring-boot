@@ -1,0 +1,13 @@
+package com.tristan.clients.repositories;
+
+import com.tristan.clients.models.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface AccountRepository extends JpaRepository<Account, Long> {
+
+    boolean existsByAccountNumber(String accountNumber);
+
+    List<Account> iban(String iban);
+}

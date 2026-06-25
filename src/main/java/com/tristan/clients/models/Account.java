@@ -29,4 +29,14 @@ public class Account {
     private String status;
     private LocalDateTime openedAt;
     private LocalDateTime closedAt;
+
+    public void setStarterBalances(){
+        this.balance = BigDecimal.ZERO;
+        this.availableBalance = BigDecimal.ZERO;
+        this.reservedBalance = BigDecimal.ZERO;
+    }
+
+    public Long getClientId(){
+        return client != null ? client.getId() : null;
+    }
 }
